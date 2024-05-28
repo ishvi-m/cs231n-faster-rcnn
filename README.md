@@ -18,3 +18,15 @@ This project implements Faster R-CNN using PyTorch. The implementation includes 
 ```bash
 pip install -r requirements.txt
 ```
+
+### Train
+
+python scripts/train.py
+
+### Evaluate
+
+python scripts/inference.py
+
+### Acknowledgements
+
+https://towardsdatascience.com/understanding-and-implementing-faster-r-cnn-a-step-by-step-guide-11acfff216b0

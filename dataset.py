@@ -69,13 +69,4 @@ class ObjectDetectionDataset(Dataset):
             #gt_idx = torch.Tensor([self.name2idx[name] for name in gt_classes])
             
             img_data_all.append(img_tensor)
-            #gt_idxs_all.append(gt_idx)
-        
-        # pad bounding boxes and classes so they are of the same size
-        gt_bboxes_pad = pad_sequence(gt_boxes_all, batch_first=True, padding_value=-1)
-        #gt_classes_pad = pad_sequence(gt_idxs_all, batch_first=True, padding_value=-1)
-        
-        # stack all images
-        img_data_stacked = torch.stack(img_data_all, dim=0)
-        
-        return img_data_stacked.to(dtype=torch.float32), gt_bboxes_pad#, gt_classes_pad
+ 
